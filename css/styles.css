@@ -145,13 +145,13 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    max-width: 1440px;
 }
 
 .hero-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1440px;
 }
 
 .hero {
@@ -400,7 +400,7 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--white-filler-color);
+    color: var(--text-color);
     margin-bottom: 16px;
 }
 

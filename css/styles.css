@@ -61,6 +61,7 @@ img {
     margin: 0;
     border-bottom: 1px solid var(--button-portfolio);
     padding: 24px 0;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-all {
@@ -140,7 +141,9 @@ img {
 .section-hero {
     background-color: var(--services-color);
     padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.4),rgba(46, 47, 66, 0.4)), url("../images/people.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
@@ -148,6 +151,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 1440px;
 }
 
 .hero {
@@ -240,10 +244,10 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 264px;
     height: 112px;
     background-color: var(--white-filler-color);
     margin-bottom: 8px;
+    border-radius: 4px;
 }
 
 .section-work {
@@ -298,7 +302,7 @@ img {
     background-color: var(--text-color);
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 1px 1px 5px 0 var(--paragraph-color);
+    box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team {
@@ -333,7 +337,7 @@ img {
 }
 
 .worker-all {
-    padding: 32px 16px;
+    padding: 32px 0px;
 }
 .social-list{
     display: flex;
@@ -355,7 +359,9 @@ img {
 .social-list-link:focus{
     background-color: var(--title-color);
 }
-
+.social-list-icons{
+    fill: var(--white-filler-color);
+}
 .footer {
     display: flex;
     background-color: var(--services-color);
@@ -364,6 +370,7 @@ img {
 }
 .footer-container{
     display: flex;
+    align-items: baseline;
 }
 
 .logo-footer {
@@ -387,6 +394,14 @@ img {
     letter-spacing: 0.02em;
     color: var(--white-filler-color);
     max-width: 264px;
+}
+.footer-paragraf{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-filler-color);
+    margin-bottom: 16px;
 }
 
 .footer-social{
@@ -412,6 +427,9 @@ img {
 .social-list-link-footer:hover,
 .social-list-link-footer:focus{
     background-color: var(--green-color);
+}
+.social-list-icons-footer{
+    fill: var(--white-filler-color);
 }
 .main-footer{
     display: block;
@@ -451,36 +469,33 @@ img {
 
 .button-all:hover,
 .button-all:focus {
+    color: var(--text-color);
     background-color: var(--title-color);
     border: 1px solid transparent;
-    box-shadow: 1px 1px 5px 0 var(--paragraph-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
-.button-all:hover,
-.button-all:focus {
-    color: var(--text-color);
-}
-
 .portfolio-images-list {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
 }
+.images-link-portfolio{
+    display: block;
+}
+.images-link-portfolio:hover,
+.images-link-portfolio:focus{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
 
+}
 .images-portfolio {
     width: calc((100% - 48px) / 3);
 }
-.images-portfolio:hover{
-    box-shadow: 1px 1px 5px 0 var(--paragraph-color)
-
-} 
 .services-all {
     padding: 32px 16px;
     border: 1px solid var(--button-portfolio);
     border-top: none;
 }
-
 .services {
     font-weight: 500;
     font-size: 20px;
@@ -505,18 +520,24 @@ img {
     display: flex;
     gap: 24px;
 }
+.customers-link-all{
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+    background-color: var(--text-color);  
+}
 .customers-link{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 168px;
-    height: 88px;
-    background-color: var(--text-color);
-    border-radius: 4px 4px 4px 4px;
-    border: 1px solid var(--light-slate-color);
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--light-slate-color); 
+    border-radius: 4px;
+    color: var(--light-slate-color);
 }
 .customers-icons{
-    fill: var(--light-slate-color);
+    fill: currentColor;
+    
 }
 .customers-icons:focus,
 .customers-icons:hover{
@@ -525,6 +546,7 @@ img {
 .customers-link:hover,
 .customers-link:focus{
     border: 1px solid var(--title-color);
+    color: var(--title-color);
 
 }
 
